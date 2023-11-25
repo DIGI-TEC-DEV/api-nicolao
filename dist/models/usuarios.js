@@ -28,7 +28,7 @@ const Usuarios = connection_1.default.define('Usuarios', {
 }, {
     createdAt: false,
     updatedAt: false,
-    tableName: 'usuario'
+    tableName: 'usuarios'
 });
 Usuarios.belongsTo(roles_1.default, { foreignKey: 'idrol', as: 'Rol' }); // Relación co roles
 Usuarios.belongsTo(empleados_1.default, { foreignKey: 'idempleado', as: 'Empleado' }); // Relación con empleados
