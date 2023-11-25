@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const connection_1 = __importDefault(require("../db/connection"));
-class Empleados extends sequelize_1.Model {
+class empleados extends sequelize_1.Model {
 }
-Empleados.init({
+empleados.init({
     nombre: {
         type: sequelize_1.DataTypes.STRING,
         allowNull: false
@@ -40,4 +40,4 @@ Empleados.init({
     modelName: 'Empleados',
     timestamps: false
 });
-exports.default = Empleados;
+exports.default = empleados;

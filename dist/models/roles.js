@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const sequelize_1 = require("sequelize");
 const connection_1 = __importDefault(require("../db/connection"));
-const Roles = connection_1.default.define('Roles', {
+const roles = connection_1.default.define('Roles', {
     nombre: {
         type: sequelize_1.DataTypes.STRING,
         unique: true,
@@ -15,4 +15,4 @@ const Roles = connection_1.default.define('Roles', {
     createdAt: false,
     updatedAt: false,
 });
-exports.default = Roles;
+exports.default = roles;

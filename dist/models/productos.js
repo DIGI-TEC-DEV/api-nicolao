@@ -17,7 +17,7 @@ Productos.init({
     }
 }, {
     sequelize: connection_1.default,
-    modelName: 'Productos',
+    modelName: 'productos',
     timestamps: false
 });
 exports.default = Productos;

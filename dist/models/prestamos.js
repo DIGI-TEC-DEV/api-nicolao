@@ -37,7 +37,7 @@ Prestamos.init({
     }
 }, {
     sequelize: connection_1.default,
-    modelName: 'Prestamos',
+    modelName: 'prestamos',
     timestamps: false
 });
 Prestamos.belongsTo(clientes_1.default, { foreignKey: 'idcliente', as: 'Cliente' }); // Relación con Clientes
