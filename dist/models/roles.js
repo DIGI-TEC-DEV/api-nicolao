@@ -13,6 +13,7 @@ const roles = connection_1.default.define('Roles', {
     },
 }, {
     createdAt: false,
+    tableName: 'roles',
     updatedAt: false,
 });
 exports.default = roles;
