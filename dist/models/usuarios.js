@@ -7,7 +7,7 @@ const sequelize_1 = require("sequelize");
 const connection_1 = __importDefault(require("../db/connection"));
 const roles_1 = __importDefault(require("./roles")); // Importa el modelo de Clientes
 const empleados_1 = __importDefault(require("./empleados"));
-const usuarios = connection_1.default.define('Usuarios', {
+const Usuarios = connection_1.default.define('Usuarios', {
     idempleado: {
         type: sequelize_1.DataTypes.NUMBER,
         allowNull: false
@@ -28,7 +28,8 @@ const usuarios = connection_1.default.define('Usuarios', {
 }, {
     createdAt: false,
     updatedAt: false,
+    tableName: 'usuario'
 });
-usuarios.belongsTo(roles_1.default, { foreignKey: 'idrol', as: 'Rol' }); // Relación co roles
-usuarios.belongsTo(empleados_1.default, { foreignKey: 'idempleado', as: 'Empleado' }); // Relación con empleados
-exports.default = usuarios;
+Usuarios.belongsTo(roles_1.default, { foreignKey: 'idrol', as: 'Rol' }); // Relación co roles
+Usuarios.belongsTo(empleados_1.default, { foreignKey: 'idempleado', as: 'Empleado' }); // Relación con empleados
+exports.default = Usuarios;
